@@ -34,9 +34,13 @@ class TopoSortBFS:
         for index,value in enumerate(indegree):
             if(value == 0):
                 q.append(index)
-        
-        
-        
+
+
+        '''
+        While the queue is not empty:
+        Remove a vertex 'current' with in-degree 0 from the queue and add it to topo_order.
+        For each neighbor of current, decrement its in-degree by 1. If a neighbor's in-degree becomes 0, add it to the queue.
+        '''
         topo_order=[]
         while(q):
             # Remove a vertex with in-degree 0
