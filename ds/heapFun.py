@@ -70,3 +70,22 @@ heapq._heapify_max(customers)
 print(customers)
 # for pop use _heapop_max() instead of heappop()
 print(heapq._heappop_max(customers))
+
+
+# find n largest and n smallest elements from the heap using nlargest() and nsmallest()
+import heapq
+customers = []
+customers.append((5, "Abhi5"))
+customers.append((0, "Abhi0"))
+heapq.heapify(customers)
+heapq.heappush(customers, (2, "Harry"))
+heapq.heappush(customers, (3, "Charles"))
+heapq.heappush(customers, (1, "Riya"))
+heapq.heappush(customers, (4, "Stacy"))
+
+print("nsmallest")
+print(heapq.nsmallest(2, customers))  # Output: [0,1]
+
+print("nlargest")
+print(heapq.nlargest(2, customers))  # Output: [4, 5]
+
