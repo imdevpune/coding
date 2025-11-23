@@ -19,6 +19,9 @@ Output: []
 Constraints: 
 The number of nodes in the tree is in the range [0, 2000].
 -1000 <= Node.val <= 1000
+
+Time Complexity: O(N) where N is number of nodes in tree. Why: because we visit each node exactly once.
+Space Complexity: O(W) where W is maximum width of the tree. In worst case, W can be N/2 for a balanced tree.
 '''
 
 from typing import List, Optional
